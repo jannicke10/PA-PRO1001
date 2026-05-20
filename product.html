@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fram | Product Selection</title>
+    <meta
+      name="description"
+      content="Browse Fram's seasonal produce selection sourced from local farms."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page products-page">
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+
+      <header class="site-header">
+        <label class="menu-button" for="nav-toggle" aria-label="Open navigation">
+          <span></span>
+        </label>
+        <a class="brand" href="index.html">FRAM</a>
+        <a class="cart-pill" href="#newsletter" aria-label="Go to basket">0</a>
+      </header>
+
+      <aside class="nav-overlay" aria-hidden="true">
+        <div class="nav-overlay__top">
+          <label class="menu-close" for="nav-toggle" aria-label="Close navigation"></label>
+          <a class="brand" href="index.html">FRAM</a>
+          <span></span>
+        </div>
+        <div class="nav-overlay__links">
+          <nav class="nav-primary">
+            <a href="product.html">Products</a>
+            <a href="index.html#chat">Chat</a>
+          </nav>
+          <a class="nav-checkout" href="#newsletter">Checkout</a>
+        </div>
+      </aside>
+
+      <main>
+        <section class="products-catalog">
+          <div class="products-shell">
+            <header class="products-intro">
+              <h1>Produce</h1>
+              <p class="product-description">
+                Explore our selection of seasonal produce, sourced directly from local farms to ensure peak freshness and quality. Every item is chosen with care, supporting sustainable practices and bringing the best of the harvest to your table.
+              </p>
+            </header>
+
+            <div class="product-grid">
+              <article class="product-card">
+                <div class="product-card__visual">
+                  <img
+                    src="https://images.unsplash.com/photo-1515543904379-3d757afe72e3?auto=format&fit=crop&w=900&q=80"
+                    alt="Oats in close-up"
+                  />
+                  <a class="buy-button" href="#newsletter">Add to basket &uarr;</a>
+                </div>
+                <div class="product-card__row">
+                  <h2 class="product-card__name">Oats</h2>
+                  <p class="product-card__price">16 kr / kg</p>
+                </div>
+                <p class="product-card__meta">1 kg</p>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__visual">
+                  <img
+                    src="https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?auto=format&fit=crop&w=900&q=80"
+                    alt="Red onions in close-up"
+                  />
+                  <a class="buy-button" href="#newsletter">Add to basket &uarr;</a>
+                </div>
+                <div class="product-card__row">
+                  <h2 class="product-card__name">Red Onions</h2>
+                  <p class="product-card__price">45 kr / kg</p>
+                </div>
+                <p class="product-card__meta">1 kg</p>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__visual">
+                  <img
+                    src="https://images.unsplash.com/photo-1615477550927-6ec0f44a86c0?auto=format&fit=crop&w=900&q=80"
+                    alt="Garlic bulbs in close-up"
+                  />
+                  <a class="buy-button" href="#newsletter">Add to basket &uarr;</a>
+                </div>
+                <div class="product-card__row">
+                  <h2 class="product-card__name">Garlic</h2>
+                  <p class="product-card__price">38 kr</p>
+                </div>
+                <p class="product-card__meta">0.2 kg</p>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__visual">
+                  <img
+                    src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=900&q=80"
+                    alt="Potatoes in close-up"
+                  />
+                  <a class="buy-button" href="#newsletter">Add to basket &uarr;</a>
+                </div>
+                <div class="product-card__row">
+                  <h2 class="product-card__name">Potato</h2>
+                  <p class="product-card__price">32 kr / kg</p>
+                </div>
+                <p class="product-card__meta">1 kg</p>
+              </article>
+
+              <article class="product-card">
+                <div class="product-card__visual">
+                  <img
+                    src="https://images.unsplash.com/photo-1447175008436-054170c2e979?auto=format&fit=crop&w=900&q=80"
+                    alt="Carrots in close-up"
+                  />
+                  <a class="buy-button" href="#newsletter">Add to basket &uarr;</a>
+                </div>
+                <div class="product-card__row">
+                  <h2 class="product-card__name">Carrots</h2>
+                  <p class="product-card__price">48 kr / kg</p>
+                </div>
+                <p class="product-card__meta">1 kg</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="map-section">
+          <div class="map-shell">
+            <div class="map-copy">
+              <h2 class="map-label">See Our Partnering Farms</h2>
+            </div>
+            <div class="map-frame">
+              <iframe
+                title="Braastad Gaard map"
+                src="https://www.google.com/maps?q=Braastad%20Gaard%20Norway&z=9&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="newsletter" id="newsletter">
+        <div class="footer-shell">
+          <div class="footer-brand">FRAM</div>
+          <div class="newsletter-inner">
+            <div>
+              <h2 class="newsletter-title">Stay Updated</h2>
+              <p class="newsletter-copy">
+                Sign up for our newsletter to be the first to know about new produce or other exciting news!
+              </p>
+              <form class="newsletter-form">
+                <input type="text" name="first-name" placeholder="First name" />
+                <input type="email" name="email" placeholder="E-mail address" />
+                <button class="newsletter-submit" type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

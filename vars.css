@@ -1,0 +1,20 @@
+:root {
+  --bg-page: #f7f2de;
+  --bg-surface: #ffffff;
+  --bg-accent: #008f51;
+  --bg-footer: #dc4131;
+  --text-main: #0b0a08;
+  --text-inverse: #ffffff;
+  --text-muted: rgba(11, 10, 8, 0.78);
+  --line: rgba(11, 10, 8, 0.55);
+  --button: #dc4131;
+  --button-hover: #ae2e21;
+  --cart: #27c267;
+  --input: #e1eaf0;
+  --radius-card: 18px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 18px 48px rgba(11, 10, 8, 0.1);
+  --container: 1520px;
+  --font-display: "Frank Ruhl Libre", Georgia, serif;
+  --font-body: "Arimo", Helvetica, Arial, sans-serif;
+}
