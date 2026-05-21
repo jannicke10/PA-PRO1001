@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fram | Chat</title>
+    <meta
+      name="description"
+      content="Ask Fram about farms, produce, sustainability, and deliveries."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Frank+Ruhl+Libre:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page chat-page">
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+
+      <header class="site-header">
+        <label class="menu-button" for="nav-toggle" aria-label="Open navigation">
+          <span></span>
+        </label>
+        <a class="brand" href="index.html">FRAM</a>
+        <a class="cart-pill" href="product.html" aria-label="Go to products">0</a>
+      </header>
+
+      <aside class="nav-overlay" aria-hidden="true">
+        <div class="nav-overlay__top">
+          <label class="menu-close" for="nav-toggle" aria-label="Close navigation"></label>
+          <a class="brand" href="index.html">FRAM</a>
+          <span></span>
+        </div>
+        <div class="nav-overlay__links">
+          <nav class="nav-primary">
+            <a href="product.html">Products</a>
+            <a href="chat.html">Chat</a>
+          </nav>
+          <a class="nav-checkout" href="product.html#newsletter">Checkout</a>
+        </div>
+      </aside>
+
+      <main class="chat-layout">
+        <div class="chat-page__media"></div>
+
+        <section class="chat-shell" aria-labelledby="chat-title">
+          <h1 class="sr-only" id="chat-title">Fram chat</h1>
+
+          <div class="chat-panel">
+            <div class="chat-window" id="chat-window" aria-live="polite">
+              <div class="chat-spacer" aria-hidden="true"></div>
+
+              <div class="chat-row chat-row--bot">
+                <span class="chat-speaker">FRAM</span>
+                <p class="chat-bubble chat-bubble--bot">What can I help you with today?</p>
+              </div>
+
+              <div class="chat-row chat-row--user">
+                <p class="chat-bubble chat-bubble--user">
+                  I want to know more about the farms you work with. How did you end up
+                  partnering for this service?
+                </p>
+              </div>
+            </div>
+
+            <p class="chat-status" id="chat-status" hidden></p>
+
+            <form class="chat-form" id="chat-form" action="#" method="post" novalidate>
+              <label class="sr-only" for="chat-message">Type your message</label>
+              <input
+                class="chat-input"
+                id="chat-message"
+                name="chat-message"
+                type="text"
+                placeholder=""
+                aria-label="Type your message"
+              />
+              <button class="chat-send" id="chat-send" type="submit" aria-label="Send message">
+                <span aria-hidden="true">&uarr;</span>
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
