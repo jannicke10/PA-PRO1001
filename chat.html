@@ -50,6 +50,30 @@
           <h1 class="sr-only" id="chat-title">Fram chat</h1>
 
           <div class="chat-panel">
+            <section class="chat-api-box" aria-labelledby="chat-api-title">
+              <h2 class="chat-api-box__title" id="chat-api-title">OpenAI Setup</h2>
+              <form class="chat-api-form" id="chat-api-form" novalidate>
+                <label class="chat-api-box__label" for="api-key">API key</label>
+                <div class="chat-api-form__controls">
+                  <input
+                    class="chat-api-box__input"
+                    id="api-key"
+                    name="api-key"
+                    type="password"
+                    autocomplete="off"
+                    placeholder="Paste your OpenAI API key"
+                  />
+                  <button class="chat-api-form__button" id="api-key-submit" type="submit">
+                    Use key
+                  </button>
+                </div>
+                <p class="chat-api-box__note">
+                  Your key is only used in your browser for this session. Never commit it to GitHub.
+                </p>
+                <p class="chat-api-box__status" id="chat-api-status" hidden></p>
+              </form>
+            </section>
+
             <div class="chat-window" id="chat-window" aria-live="polite">
               <div class="chat-spacer" aria-hidden="true"></div>
 
@@ -68,14 +92,14 @@
 
             <p class="chat-status" id="chat-status" hidden></p>
 
-            <form class="chat-form" id="chat-form" action="#" method="post" novalidate>
+            <form class="chat-form" id="chat-form" novalidate>
               <label class="sr-only" for="chat-message">Type your message</label>
               <input
                 class="chat-input"
                 id="chat-message"
                 name="chat-message"
                 type="text"
-                placeholder=""
+                placeholder="Ask about farms, produce, or delivery"
                 aria-label="Type your message"
               />
               <button class="chat-send" id="chat-send" type="submit" aria-label="Send message">
