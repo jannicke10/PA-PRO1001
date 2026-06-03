@@ -136,6 +136,19 @@ The project was built step by step with focus on keeping the code understandable
 - OpenAI API documentation and course module examples
 - Browser developer tools for testing and debugging
 
+## Image Credits
+
+The design references and current implementation use images originally sourced from Unsplash.
+
+- Hero image by Markus Spiske on Unsplash
+- Seasonal produce image by Nina Luong on Unsplash
+- Farmer image by Rebecca Ritchie on Unsplash
+- Oats image by Lukasz Rawa on Unsplash
+- Potatoes image by Rodrigo dos Reis on Unsplash
+- Carrots image by Goh Rhy Yan on Unsplash
+- Red onions image by Goh Rhy Yan on Unsplash
+- Garlic image by Matthew Pilachowski on Unsplash
+
 ## Author
 
 Project created as part of the Frontend Essentials final assignment.
