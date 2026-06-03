@@ -39,7 +39,7 @@
             <a href="product.html">Products</a>
             <a href="chat.html">Chat</a>
           </nav>
-          <a class="nav-checkout" href="#newsletter">Checkout</a>
+          <button class="nav-checkout nav-action-button" type="button">Checkout</button>
         </div>
       </aside>
 
@@ -60,7 +60,7 @@
                     src="images/oats.jpg"
                     alt="Oats in close-up"
                   />
-                  <a class="buy-button" href="#newsletter">Add to basket &uarr;</a>
+                  <button class="buy-button buy-action-button" type="button">Add to basket &uarr;</button>
                 </div>
                 <div class="product-card__row">
                   <h2 class="product-card__name">Oats</h2>
@@ -75,7 +75,7 @@
                     src="images/red-onions.jpg"
                     alt="Red onions in close-up"
                   />
-                  <a class="buy-button" href="#newsletter">Add to basket &uarr;</a>
+                  <button class="buy-button buy-action-button" type="button">Add to basket &uarr;</button>
                 </div>
                 <div class="product-card__row">
                   <h2 class="product-card__name">Red Onions</h2>
@@ -90,7 +90,7 @@
                     src="images/lovely-garlic.jpg"
                     alt="Garlic bulbs in close-up"
                   />
-                  <a class="buy-button" href="#newsletter">Add to basket &uarr;</a>
+                  <button class="buy-button buy-action-button" type="button">Add to basket &uarr;</button>
                 </div>
                 <div class="product-card__row">
                   <h2 class="product-card__name">Garlic</h2>
@@ -105,7 +105,7 @@
                     src="images/potatoes.jpg"
                     alt="Potatoes in close-up"
                   />
-                  <a class="buy-button" href="#newsletter">Add to basket &uarr;</a>
+                  <button class="buy-button buy-action-button" type="button">Add to basket &uarr;</button>
                 </div>
                 <div class="product-card__row">
                   <h2 class="product-card__name">Potato</h2>
@@ -120,7 +120,7 @@
                     src="images/carrots.jpg"
                     alt="Carrots in close-up"
                   />
-                  <a class="buy-button" href="#newsletter">Add to basket &uarr;</a>
+                  <button class="buy-button buy-action-button" type="button">Add to basket &uarr;</button>
                 </div>
                 <div class="product-card__row">
                   <h2 class="product-card__name">Carrots</h2>
@@ -158,15 +158,17 @@
               <p class="newsletter-copy">
                 Sign up for our newsletter to be the first to know about new produce or other exciting news!
               </p>
-              <form class="newsletter-form">
-                <input type="text" name="first-name" placeholder="First name" />
-                <input type="email" name="email" placeholder="E-mail address" />
+              <form class="newsletter-form" novalidate>
+                <input type="text" name="first-name" placeholder="First name" aria-label="First name" />
+                <input type="email" name="email" placeholder="E-mail address" aria-label="E-mail address" />
                 <button class="newsletter-submit" type="submit">Send</button>
+                <p class="newsletter-status" hidden aria-live="polite"></p>
               </form>
             </div>
           </div>
         </div>
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

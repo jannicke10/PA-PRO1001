@@ -11,6 +11,61 @@ const chatSpacer = document.querySelector(".chat-spacer");
 const chatStorageKey = "fram-chat-state";
 let activeApiKey = "";
 let apiStatusTimeoutId;
+const newsletterForms = document.querySelectorAll(".newsletter-form");
+const prototypeActionButtons = document.querySelectorAll(".buy-action-button, .nav-action-button");
+
+newsletterForms.forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nameInput = form.querySelector('input[name="first-name"]');
+    const emailInput = form.querySelector('input[name="email"]');
+    const status = form.querySelector(".newsletter-status");
+
+    if (!nameInput || !emailInput || !status) {
+      return;
+    }
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+
+    clearNewsletterErrors(nameInput, emailInput);
+
+    if (!name) {
+      nameInput.classList.add("newsletter-input--error");
+      showNewsletterStatus(status, "Please enter your first name.", "error");
+      nameInput.focus();
+      return;
+    }
+
+    if (!email) {
+      emailInput.classList.add("newsletter-input--error");
+      showNewsletterStatus(status, "Please enter your e-mail address.", "error");
+      emailInput.focus();
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      emailInput.classList.add("newsletter-input--error");
+      showNewsletterStatus(status, "Please enter a valid e-mail address.", "error");
+      emailInput.focus();
+      return;
+    }
+
+    form.reset();
+    showNewsletterStatus(
+      status,
+      "Thank you. You have been added to the FRAM newsletter.",
+      "success"
+    );
+  });
+});
+
+prototypeActionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    showPrototypeStatus("Basket and checkout functionality are not implemented in this prototype.");
+  });
+});
 
 if (
   chatForm &&
@@ -256,6 +311,38 @@ function clearApiStatusTimer() {
     window.clearTimeout(apiStatusTimeoutId);
     apiStatusTimeoutId = undefined;
   }
+}
+
+function showNewsletterStatus(element, message, type) {
+  element.hidden = false;
+  element.textContent = message;
+  element.className = `newsletter-status newsletter-status--${type}`;
+}
+
+function clearNewsletterErrors(nameInput, emailInput) {
+  nameInput.classList.remove("newsletter-input--error");
+  emailInput.classList.remove("newsletter-input--error");
+}
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function showPrototypeStatus(message) {
+  const currentStatus = document.querySelector(".prototype-status");
+
+  if (currentStatus) {
+    currentStatus.remove();
+  }
+
+  const status = document.createElement("p");
+  status.className = "prototype-status";
+  status.textContent = message;
+  document.body.append(status);
+
+  window.setTimeout(() => {
+    status.remove();
+  }, 2800);
 }
 
 function saveChatState() {

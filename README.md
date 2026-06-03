@@ -1,12 +1,12 @@
 # FRAM Webshop
 
-FRAM Webshop is a frontend project for the Frontend Essentials course. The project is based on a Figma design for a sustainable Norwegian food delivery service that connects customers with local farms.
+FRAM Webshop is my final project for the Frontend Essentials course. The project is based on a Figma design for a sustainable food delivery service in Norway that connects customers with local farms.
 
-The website is built with plain HTML, CSS, and JavaScript. It includes a landing page, a product page, and a chatbot page with OpenAI integration in the browser.
+The website is built with plain HTML, CSS, and JavaScript. It includes a landing page, a product page, and a chatbot page with OpenAI integration running directly in the browser.
 
 ## Project Goals
 
-This project was created to demonstrate:
+The goal of the project was to demonstrate:
 
 - responsive frontend development with HTML5 and CSS3
 - semantic page structure
@@ -16,7 +16,7 @@ This project was created to demonstrate:
 
 ## Pages
 
-The project currently includes these pages:
+The project includes these pages:
 
 - `index.html`  
   Landing page introducing the FRAM service and highlighting selected products.
@@ -43,6 +43,7 @@ The project currently includes these pages:
   - quota/rate limit issues
   - temporary API/server errors
 - Session-based chat state restore in the browser
+- Newsletter/contact form validation with JavaScript
 
 ## Technologies Used
 
@@ -63,7 +64,7 @@ Examples:
 
 - VS Code Live Server
 - Python simple server
-- any other small static file server
+- any other simple static file server
 
 4. Open `index.html` in the browser through the local server.
 
@@ -93,9 +94,33 @@ Because this project runs entirely in the browser:
 
 For a production-ready solution, OpenAI requests should be sent through a backend server where the key can be kept secret.
 
+## API Limitations, Ethical Considerations, and Potential Bias
+
+The chatbot in this project is meant as a helpful prototype, not as a perfect or fully reliable support agent.
+
+### Limitations
+
+- The OpenAI integration runs entirely in the browser, which is acceptable for learning but not secure enough for a production application.
+- The chatbot can still produce answers that are too general, incomplete, or simply wrong.
+- The assistant is guided to stay on FRAM-related topics, but it may still misunderstand some questions or give uneven quality answers.
+
+### Ethical Considerations
+
+- Users should know that they are talking to an AI system, not a real support person.
+- AI-generated answers should not be treated as guaranteed facts without checking them.
+- The project avoids storing the user’s OpenAI key in the source code or GitHub repository.
+- The chat should not be used to collect sensitive personal information.
+
+### Potential Bias
+
+- Like other AI systems, the model may reflect biases from its training data.
+- Some replies may favor certain assumptions or ways of phrasing things over others.
+- The quality of the answer may vary depending on how a user writes the question.
+- Sustainability-related topics can also be simplified too much by the model, so responses should be read critically.
+
 ## Accessibility Notes
 
-The project includes several accessibility-focused decisions:
+The project includes several accessibility-focused choices:
 
 - semantic HTML structure
 - form labels for inputs
@@ -108,20 +133,20 @@ The project includes several accessibility-focused decisions:
 
 - The chatbot is a frontend-only prototype and uses a browser-entered API key.
 - The chat is intentionally limited to FRAM-related topics.
-- Some page imagery currently uses remote image URLs instead of final exported local assets.
-- The README reflects the current state of the project, and more submission polish may still be added.
+- There is still a small visual seam at the bottom of the hero area that could be refined further.
+- This project is designed as a course submission and not as a production-ready webshop.
 
 ## Future Improvements
 
-- Add a dedicated contact page with client-side form validation
-- Replace placeholder/remote images with final local design assets
+- Improve the final visual polish in a few edge cases
+- Add a more advanced form flow if the design is expanded later
 - Improve chatbot response guidance further
 - Complete final accessibility and Lighthouse testing
-- Refine remaining visual bugs in the navigation/menu overlay
+- Add a backend solution for secure API handling
 
 ## Development Notes
 
-The project was built step by step with focus on keeping the code understandable for a beginner-level frontend workflow:
+I built the project step by step and tried to keep the code understandable from a beginner frontend perspective:
 
 - structure the layout first
 - build the static chat UI
@@ -151,4 +176,4 @@ The design references and current implementation use images originally sourced f
 
 ## Author
 
-Project created as part of the Frontend Essentials final assignment.
+Created as part of the Frontend Essentials final assignment.

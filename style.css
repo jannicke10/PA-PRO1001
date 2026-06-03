@@ -170,9 +170,23 @@ textarea {
 
 .nav-primary a,
 .nav-checkout {
-  font-size: clamp(2rem, 1.4rem + 3vw, 3.4rem);
+  font-size: clamp(1.8rem, 1.2rem + 1.8vw, 2.9rem);
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.nav-action-button {
+  min-inline-size: auto;
+  min-block-size: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
 }
 
 .nav-primary a:hover,
@@ -436,6 +450,21 @@ textarea {
   font-size: 0.88rem;
 }
 
+.prototype-status {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 60;
+  max-inline-size: 340px;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  background: rgba(11, 10, 8, 0.92);
+  color: var(--truewhite);
+  font-size: 0.95rem;
+  line-height: 1.35;
+  box-shadow: 0 12px 28px rgba(11, 10, 8, 0.22);
+}
+
 .product-card__row {
   display: flex;
   align-items: baseline;
@@ -502,6 +531,25 @@ textarea {
   border-radius: 4px;
   background: #fff;
   color: var(--primary-interface-and-text);
+}
+
+.newsletter-form input.newsletter-input--error {
+  outline: 2px solid #ffffff;
+  outline-offset: 0;
+}
+
+.newsletter-status {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.newsletter-status--error {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.newsletter-status--success {
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .newsletter-submit {
@@ -683,8 +731,13 @@ textarea {
     text-align: center;
   }
 
+  .nav-primary a {
+    font-size: clamp(2rem, 1.5rem + 1vw, 2.8rem);
+  }
+
   .nav-checkout {
     align-self: end;
+    font-size: clamp(2rem, 1.5rem + 1vw, 2.8rem);
   }
 
   .nav-overlay__top .brand,
