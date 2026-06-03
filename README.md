@@ -136,14 +136,6 @@ The project includes several accessibility-focused choices:
 - There is still a small visual seam at the bottom of the hero area that could be refined further.
 - This project is designed as a course submission and not as a production-ready webshop.
 
-## Future Improvements
-
-- Improve the final visual polish in a few edge cases
-- Add a more advanced form flow if the design is expanded later
-- Improve chatbot response guidance further
-- Complete final accessibility and Lighthouse testing
-- Add a backend solution for secure API handling
-
 ## Development Notes
 
 I built the project step by step and tried to keep the code understandable from a beginner frontend perspective:
@@ -160,6 +152,7 @@ I built the project step by step and tried to keep the code understandable from 
 - Figma design specification provided for the assignment
 - OpenAI API documentation and course module examples
 - Browser developer tools for testing and debugging
+- Codex as a development support tool for planning, debugging, and implementation guidance
 
 ## Image Credits
 
