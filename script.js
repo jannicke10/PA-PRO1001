@@ -12,7 +12,7 @@ const chatStorageKey = "fram-chat-state";
 let activeApiKey = "";
 let apiStatusTimeoutId;
 const newsletterForms = document.querySelectorAll(".newsletter-form");
-const prototypeActionButtons = document.querySelectorAll(".buy-action-button, .nav-action-button");
+const prototypeActionButtons = document.querySelectorAll(".buy-action-button, .nav-action-button, .cart-action-button");
 
 newsletterForms.forEach((form) => {
   form.addEventListener("submit", (event) => {
