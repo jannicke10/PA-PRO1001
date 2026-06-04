@@ -1,6 +1,7 @@
 # FRAM Webshop
 
-FRAM Webshop is my final project for the Frontend Essentials course. The project is based on a Figma design for a sustainable food delivery service in Norway that connects customers with local farms.
+FRAM Webshop is my final project for the Front-end Essentials course.
+The project is based on a project assignment brief in Qybele, and a Figma design for a sustainable food delivery service in Norway that connects customers with local farms.
 
 The website is built with plain HTML, CSS, and JavaScript. It includes a landing page, a product page, and a chatbot page with OpenAI integration running directly in the browser.
 
@@ -8,7 +9,7 @@ The website is built with plain HTML, CSS, and JavaScript. It includes a landing
 
 The goal of the project was to demonstrate:
 
-- responsive frontend development with HTML5 and CSS3
+- responsive front-end development with HTML5 and CSS3
 - semantic page structure
 - browser-based JavaScript interaction
 - external API integration using the OpenAI API
